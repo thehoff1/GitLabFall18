@@ -29,12 +29,13 @@
 #include <stdbool.h>
 
 //Prototypes
-void sleep(unsigned int seconds);
+void warning(int count);
+char uppercase(char *str);
 
 void shuffle(int *a, int *b, int SIZE);
 void combine(int *a, int *b, int *c, int *d, int *all);
 
-int usleep(suseconds_t usec);
+//int usleep(suseconds_t usec);
 
 int rando(void);
 int gambleRandom(void);
@@ -3715,62 +3716,155 @@ void main(void)
 			break;
 		}
             case 13:
+            {
+                
+                while(choice != 99)
                 {
                     
-                    while(choice != 99)
+                    #define RED(string)     "\x1b[31m" string "\x1b[0m"
+                    #define GREEN(string)    "\x1b[32m" string "\x1b[0m"
+                    #define YELLOW(string)  "\x1b[33m" string "\x1b[0m"
+                    #define BLUE(string)     "\x1b[34m" string "\x1b[0m"
+                    #define MAGENTA(string)  "\x1b[35m" string "\x1b[0m"
+                    #define CYAN(string)     "\x1b[36m" string "\x1b[0m"
+                    #define RESET(string)    "\x1b[0m" string "\x1b[0m"
+                    #define SIZE 20
+                    
+                    //Variables
+                    char str[SIZE];
+                    int count;
+                    unsigned sleep(unsigned seconds); //sleep timer
+                    int select;
+                    
+                    //Story
+                    puts("");
+                    puts("" BLUE("You open the door and find a time traveling car. You're excited to drive the traveling car. You get in the car and start thinking of all the places in time you could visit. The car asks you...")"");
+                    
+                    //Question
+                    puts("");
+                    puts(""CYAN("WHAT TIME AND PLACE WOULD YOU LIKE TO TRAVEL?")"");
+                    scanf("%s\n", str);
+                    puts("\n");
+                    
+                    
+                    puts("" YELLOW("EEEEEE      X     X    CCCCCCC     EEEEEE     L          L          EEEEEE    N      N    TTTTTTTTTTT   ")"");
+                    puts("" YELLOW("E            X   X     C           E          L          L          E         N N    N         T        ")"");
+                    puts("" YELLOW("E             X X      C           E          L          L          E         N  N   N         T        ")"");
+                    puts("" YELLOW("EEEEE          X       C           EEEEE      L          L          EEEEE     N   N  N         T        ")"");
+                    puts("" YELLOW("E             X X      C           E          L          L          E         N    N N         T        ")"");
+                    puts("" YELLOW("E            X   X     C           E          L          L          E         N     NN         T        ")"");
+                    puts("" YELLOW("EEEEEE      X     X    CCCCCCC     EEEEEE     LLLLLLL    LLLLLLL    EEEEEE    N      N         T        ")"");
+                    
+                    puts("\n");
+                    puts("YOU WILL BE TRAVELING TO ");
+                    printf("%c\t",uppercase(str));
+                    //puts("");
+                    
+                    //Story
+                    puts("" BLUE("\nYou look at your watch and the hands are turning backwards. You look around and see the wormhole around you. Everything is moving so fast! The time traveling car is trembling and now you are starting to feel really dizzy. You want it to stop but it continues to move faster. You reach out to press the red button in front of you. Suddenly...")"");
+                    puts("");
+                    
+                    sleep(10);
+                    
+                    //Warning
+                    warning(count);
+                    
+                    //Sleep timer
+                    sleep(5);
+                    
+                    //Story
+                    puts(""BLUE("\nYou have fainted. You wake up you see a green blurry light. You're trying to read what is says but your vision is still a little blurry")"");
+                    
+                    //Prints
+                    puts("\n");
+                    puts(""GREEN("\nY_____________________________________________________________O___________________U")"");
+                    
+                    //sleep timer
+                    sleep(3);
+                    //Prints
+                    puts(""GREEN("\nH_______________________________________________________________A__________________________________V____________E")"");
+                    
+                    //sleep timer
+                    sleep(3);
+                    
+                    puts(""GREEN("\nA_____________R________R____________________________________________________I_________________________________V___________________E_________________________D")"");
+                    
+                    //sleep timer
+                    sleep(3);
+                    
+                    puts(""GREEN("\nT________________O Y____________O_______________U____________R")"");
+                    
+                    //sleep timer
+                    sleep(3);
+                    puts(""GREEN("\nD_____________E_________________________________S__________T_________________I______________________________N______________AT____ION")"");
+                    
+                    //Story
+                    puts(""BLUE("\nYou wipe your eyes getting closer to the screen to read what it says...")"");
+                    //sleep timer
+                    sleep(4);
+                    
+                    
+                    puts(""GREEN("\nYOU HAVE ARRIVED TO YOUR DESTINATION")"");
+                    
+                    //Sleep
+                    sleep(2);
+                    
+                    //Story
+                    puts(""BLUE("\nYou look out the window but you do not know where you have landed. You look out and you see a lot of trees and the foggy sky. You try turning on the time traveling car but the car is damaged and out of battery. You get out of the time traveling car and decide to wander around the forest. As you walk through the forest, you hear a sound. You do not know where it's coming from but then you hear it again. You want to know what it is so you follow the sound. You walk through the brushes. You ask yourself 'IS THAT REALLY WHAT I THINK IT IS. I HAVE TO HURRY!' You get closer and closer to the sound. I KNEW IT! IT'S A TRAIN! You search around but don't see anyone.Suddenly,the train starts to move?")"");
+                    
+                    
+                    while(select)
                     {
-                        puts("You open the door and find yourself in a time traveling car. There are three buttons in front of you. In order head back home, you will have to travel back in time and surive the survival. If you fail to save them, you will end up back in the same room with water and drown. If you save their life you will be able to go back home");
-                        puts("The first button will take you to Zions national Park and you must save the dog from drowning in the flood");
-                        puts("The second button will take you to Yosemite National Park and you must save the your best friend from a wildfire ");
-                        puts("The third button will take you to Hawaii Volcanoes National Park and you must save the 7 year old boy from the erupting volcano");
+                        //Questions
+                        puts("\n");
+                        puts(""BLUE("What should you do?")"");
+                    }
+                    
+                    
+                    puts(""YELLOW("1. Continue walking and search for a road?\t\tSELECT: (1)")"");
+                    puts(""YELLOW("2. Walk back to the time traveling car?\t\t\tSELECT: (2)")"");
+                    puts(""YELLOW("3. Get on the moving train?\t\t\t\tSELECT: (3)")"");
+                    printf("%d\n", select);
+                    puts("\n");
+                    
+                    exit(0);
+                    
+                    
+                    if(select == 1)
+                    {
                         
-                        scanf("%d",&choice);
+                        puts(""BLUE("You let the train leave so now you're back on your walk in hope of finding a road that will lead back to a city or village. As you continue to walk you find   ")"");
                         
-                        if(choice == 1)
-                        {
-                            puts("Welcome to Zions National Park");
-                        }
-                        
-                        if(choice == 2)
-                        {
-                            puts("Welcome to Yosemite National Park");
-                        }
-                        
-                        if(choice == 3)
-                        {
-                            puts("Welcome to Hawaii Volcanoes National Park");
-                        }
                         
                     }
-                    switch(choice)
+                    
+                    
+                    if(select == 2)
                     {
-                        case 1:
-                            puts("You will be able to stay for here for 5 days. You are provided a " );
-                            
-                            
-                            break;
-                        case 2:
-                            
-                            puts("You will be able to stay for here for 5 days. You are provided a  ");
-                            
-                            
-                            
-                            
-                            break;
-                            
-                        case 3:
-                            
-                            puts("You will be able to stay for here for 5 days. You are provided a"  );
-                            
-                            
-                            break;
-                            
+                        puts(""BLUE("You walk back to the car and ")"");
+                        
+                        
                     }
-                    //break;
+                    
+                    else if(select == 3)
+                    {
+                        
+                        puts(""BLUE("You walk back to the car and ")"");
+                        
+                    }
+                    
+                    
+                    
                 }
-                
+                break;
+            }
+               // exit(0);
+        }
 
-                
+               
+        
+
+
             case 14:
                 {
                     int num, i, j, winning;
@@ -4789,6 +4883,40 @@ int RolltheDiceman(void)
 	return a;
 }
 
+char uppercase(char *str)
+{
+    int c = 0;
+    char ch;
+    
+    while (str[c] != '\0')
+    {
+        ch = str[c];
+        if (ch >= 'a' && ch <= 'z')
+            str[c] = str[c] - 32;
+        c++;
+    }
+    
+    printf("%s\n", str);
+    
+    
+}
+
+
+void warning(int count)
+{
+    for(count = 0;count<1000;count++)
+    {
+        if(count!=99)
+        {
+            
+            printf("" RED("WARNING! TIME SYSTEM MALFUNCTION!") "");
+        }
+        
+    }
+    
+}
+
+
 void casecheck(void)
 {
 	char input[] ={'"','T','h','e','y',' ','D','i','d',' ','S','u','r','g','e','r','y',' ','O','n',' ','A',' ','G','R','A','P','E','!','"'};
@@ -4898,3 +5026,4 @@ void randomfill(void)
 	puts("I guess I have no other choice but to kill you.... muahahaha\n");
 	puts("----- GAME OVER -----\n");
 }
+
